@@ -1,0 +1,164 @@
+@import "./variables";
+@import "./size";
+
+#content {
+    max-width: $size-1200;
+    margin: auto;
+    .content-fragment {
+        margin: $size-72 auto ;
+        &__col1 {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            text-align: center;
+            color: $black;
+        }
+        &__col3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: $size-40
+           
+        }
+        &__col31 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            gap: $size-40;
+            margin: $size-72 auto;
+            text-align: center;
+        }
+        &__item {
+            display: flex;
+            gap: $size-15;
+            &__column {
+                flex-direction: column;
+                margin: auto;
+                p {
+                    margin-top: $size-15;
+                }
+            }
+        }
+        @media screen and (max-width: $size-1200)
+        {
+            margin: auto 10px;
+            &__col31 {
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+            }
+        }
+        @media screen and (max-width: $size-800)
+        {
+            &__col3 {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                gap: $size-15
+            }
+            &__col31 {
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+            }
+        }
+
+        .subtitle{
+            font-size: $size-24;
+            align-self: end;
+        }
+        .title{
+            font-size: $size-30;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        hr {
+            background-color: $red;
+            width: 80px;
+            margin: $size-30 auto;
+            border: none;
+            height: 3px;
+        }
+        p {
+            color: $light-grey;
+            font-size: $size-15;
+        }
+        strong {
+            color: $black;
+            font-size: $size-14;
+            text-transform: uppercase;
+            line-height: $size-24;
+            font-weight: 600;
+        }
+        .img-container {
+            height: 480px;
+            width: 370px;
+            margin-bottom: $size-40;
+            background: $gradient;
+            position: relative;
+            &.img1 {
+                background-image: url('./img/Layer16.png');
+                background-repeat: no-repeat;
+                background-position: 20% 50%;  
+            }
+            &.img2 {
+                background-image: url('./img/Layer19.png');
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+            }
+            &.img3 {
+                background-image: url('./img/Layer18.png');
+                background-repeat: no-repeat;
+                background-position: 50% 20%;
+            }
+            .gradient-background {
+                background: $gradient;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                display: none;    
+            }
+            .icons-container {
+                display: none;
+                width: fit-content;
+                margin: auto;
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+                z-index: 5;
+                &__icon {
+                    width: 55px;
+                    height: 55px;
+                    color: $red;
+                    background-color: $yellow;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: $size-24;
+                    &:hover {
+                        color: $white;
+                        background-color: $red;
+                    }
+                }
+            }
+            &:hover{
+                top: -10px;
+                left: -10px;
+                -webkit-box-shadow: 10px 10px 0px 0px $semi-green;
+                -moz-box-shadow: 10px 10px 0px 0px $semi-green;
+                box-shadow: 10px 10px 0px 0px $semi-green;
+                .gradient-background{
+                display: inline;
+                opacity: 0.5;
+                left: 0;
+                top: 0;
+                z-index: 4;
+                }
+                .icons-container {
+                    position: relative;
+                    display: flex;
+                }
+            }
+        }
+    }
+}

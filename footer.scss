@@ -1,0 +1,46 @@
+@import "./variables";
+@import "./size";
+
+#footer {
+    border-top: 1px solid #e5e5e5;
+    max-width: $size-1200;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    height: 64px;
+    justify-content: space-between;
+
+    .footer {
+        &__description {
+            color: $black;
+            .red {
+                color: $red;
+            }
+        }
+
+        &__subscribe {
+            display: flex;
+            .button {
+                background-color: $semi-green;
+                color: $white;
+                border-color: $semi-green;
+            }
+            .subscribe {
+                border: 1px solid #e5e5e5;
+                padding: 10px;
+                &::placeholder {
+                    opacity: 1;
+                    color:#e5e5e5;
+                }
+                &::-ms-input-placeholder {
+                    color:#e5e5e5;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: $size-800)
+    {
+       flex-direction: column;
+       .footer__description {margin: 15px auto}
+    }
+}

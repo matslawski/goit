@@ -1,0 +1,16 @@
+@import './variables';
+@import './size';
+@import './content';
+@import './header';
+@import './footer';
+
+body {min-width: $mobile-min;}
+
+.button {
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 2px solid;
+    width: fit-content;
+    padding: 10px 20px;
+    margin: 0 auto;
+}

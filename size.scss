@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+$roboto: 'Roboto', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
+$kaushan: 'Kaushan Script', cursive;
+
+//Device sizes
+$size-1200: 1200px;     
+$size-800: 800px;     
+$size-600: 600px;     
+$size-400: 400px;     
+$mobile-min: 370px;     
+$size-full: 100%;
+//desktop units
+$size-14: 14px;         
+$size-15: 15px;         
+$size-24: 24px;         
+$size-30: 30px;         
+$size-40: 40px;         
+$size-72: 72px;         
+$size-150: 150px;    
+//tablet units       
+$size-65: 65px;         
+$size-130: 130px;    
+//small tablet units      
+$size-55: 55px;         
+$size-100: 100px;    
+  
+//mobile units
+$size-10: 10px;         
+$size-12: 12px;         
+$size-13: 13px;         
+$size-20: 20px;         
+$size-25: 25px;         
+$size-32: 32px;         
+$size-40: 40px;         
+$size-60: 60px;    
+ 
+.subtitle {
+    font-family: $kaushan;
+}
+.title {
+    font-family: $montserrat;
+}
+p {
+    font-family: $roboto;
+}
+div {
+    font-family: $montserrat;
+}

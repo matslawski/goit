@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap");
+.subtitle {
+  font-family: "Kaushan Script", cursive;
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+div {
+  font-family: "Montserrat", sans-serif;
+}
+
+#content {
+  max-width: 1200px;
+  margin: auto;
+}
+
+#content .content-fragment {
+  margin: 72px auto;
+}
+
+#content .content-fragment__col1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  text-align: center;
+  color: #333;
+}
+
+#content .content-fragment__col3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 40px;
+}
+
+#content .content-fragment__col31 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 40px;
+  margin: 72px auto;
+  text-align: center;
+}
+
+#content .content-fragment__item {
+  display: flex;
+  gap: 15px;
+}
+
+#content .content-fragment__item__column {
+  flex-direction: column;
+  margin: auto;
+}
+
+#content .content-fragment__item__column p {
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 1200px) {
+  #content .content-fragment {
+    margin: auto 10px;
+  }
+  #content .content-fragment__col31 {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #content .content-fragment__col3 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+  }
+  #content .content-fragment__col31 {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+#content .content-fragment .subtitle {
+  font-size: 24px;
+  align-self: end;
+}
+
+#content .content-fragment .title {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#content .content-fragment hr {
+  background-color: #f38181;
+  width: 80px;
+  margin: 30px auto;
+  border: none;
+  height: 3px;
+}
+
+#content .content-fragment p {
+  color: #999;
+  font-size: 15px;
+}
+
+#content .content-fragment strong {
+  color: #333;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+#content .content-fragment .img-container {
+  height: 480px;
+  width: 370px;
+  margin-bottom: 40px;
+  background: linear-gradient(0deg, #eed889 25%, #e98383 84%);
+  position: relative;
+}
+
+#content .content-fragment .img-container.img1 {
+  background-image: url("./img/Layer16.png");
+  background-repeat: no-repeat;
+  background-position: 20% 50%;
+}
+
+#content .content-fragment .img-container.img2 {
+  background-image: url("./img/Layer19.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+#content .content-fragment .img-container.img3 {
+  background-image: url("./img/Layer18.png");
+  background-repeat: no-repeat;
+  background-position: 50% 20%;
+}
+
+#content .content-fragment .img-container .gradient-background {
+  background: linear-gradient(0deg, #eed889 25%, #e98383 84%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: none;
+}
+
+#content .content-fragment .img-container .icons-container {
+  display: none;
+  width: fit-content;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+#content .content-fragment .img-container .icons-container__icon {
+  width: 55px;
+  height: 55px;
+  color: #f38181;
+  background-color: #fce38a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+#content .content-fragment .img-container .icons-container__icon:hover {
+  color: #fff;
+  background-color: #f38181;
+}
+
+#content .content-fragment .img-container:hover {
+  top: -10px;
+  left: -10px;
+  -webkit-box-shadow: 10px 10px 0px 0px #95e1d3;
+  -moz-box-shadow: 10px 10px 0px 0px #95e1d3;
+  box-shadow: 10px 10px 0px 0px #95e1d3;
+}
+
+#content .content-fragment .img-container:hover .gradient-background {
+  display: inline;
+  opacity: 0.5;
+  left: 0;
+  top: 0;
+  z-index: 4;
+}
+
+#content .content-fragment .img-container:hover .icons-container {
+  position: relative;
+  display: flex;
+}
